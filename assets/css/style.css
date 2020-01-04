@@ -1,0 +1,46 @@
+body {
+    background-color: #defdfb;
+}
+
+.navText-style {
+    font-size: 25px;
+}
+
+#currentDay {
+    color: #7cddd5;
+    font-size: 18px;
+    padding-top: 8px;
+}
+
+.btn-style {
+    color: #7cddd5;
+    border-color: #7cddd5;
+
+}
+
+.btn-style:hover, .btn-style:active, .btn-style:link {
+    background-color: #7cddd5;
+    color:#212529;
+    border-color: #7cddd5;
+}
+
+.jumbotron-style {
+    width: 1100px;
+    height: 600px;
+    float: right;
+    background-image: -webkit-linear-gradient(white, #414141);
+}
+
+.recent-search {
+    float: left;
+
+}
+
+.recent-title {
+    color: #3a3a3a;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+
