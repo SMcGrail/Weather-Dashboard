@@ -112,7 +112,11 @@ body {
 }
 
 .weatherP {
-    /* display: inline-block; */
     color: #000815;
     font-weight: bold;
+}
+
+
+.weatherIcon {
+    float: left;
 }
