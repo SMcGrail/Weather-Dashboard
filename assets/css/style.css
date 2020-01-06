@@ -1,7 +1,6 @@
 body {
     background-color: #000815;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 
 .nav-style {
@@ -12,34 +11,24 @@ body {
 
 .navText-style {
     font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 #currentDay {
-    color: #3c4457;
-    background-color: #ffffff52;
-    font-family: 'Nunito', sans-serif;
+    color: white;
+    background-color: #0008153b;
+    font-family: 'Montserrat Alternates', sans-serif;
     border-radius: 25px;
     font-size: 18px;
-    font-weight: bold;
-    padding:  10px;
+    /* font-weight: bold; */
+    padding:  10px 10px 5px 10px;
+    margin: 0 0 0 200px;
 }
 
 .btn-style {
     color: white;
     border-color: white;
 
-}
-
-.recentList {
-    /* background-color: #ffffffb4; */
-    background-color: #00081577;
-    color: white;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 18px;
-    /* font-weight: bold; */
-    margin: 10px;
 }
 
 .btn-style:hover, .btn-style:active, .btn-style:link {
@@ -72,11 +61,24 @@ body {
 }
 
 .recent-title {
-    font-family: 'Nunito', sans-serif;
     color: white;
+    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Montserrat Alternates', sans-serif; */
     font-size: 25px;
     padding: 10px;
   
+}
+
+.recentList {
+    /* background-color: #ffffffb4; */
+    background-color: #00081577;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 18px;
+    /* font-weight: bold; */
+    margin: 10px;
 }
 
 .cityText {
@@ -85,13 +87,16 @@ body {
 
 .hRule {
     border-color: white;
+    padding-bottom: 5px;
 }
 
 .weatherCard {
     background-color: #c4c9f8;
+    font-family: 'Montserrat Alternates', sans-serif;
     position: relative;
     display: inline-block;
-    width: 18rem;
+    width: 230px;
+    margin: 5px;
 }
 
 .weatherSpecs {
@@ -106,7 +111,7 @@ body {
     margin: 10px;
     padding: 5px;
     color: white;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     text-align: center;
 }
@@ -118,5 +123,11 @@ body {
 
 
 .weatherIcon {
-    float: left;
+    float: left;   
+}
+
+.fiveDayTitle {
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 25px;
 }

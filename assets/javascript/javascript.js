@@ -1,6 +1,7 @@
 $(document).ready(function () {
     let todayDateTime = $("#currentDay");
     let todayDate = $("#todayDate");
+    let dateIncrement = 1;
 
     setInterval(() => {
         const now = moment();
@@ -15,7 +16,7 @@ $(document).ready(function () {
 
 
     $(".searchBtn").on("click", function () {
-        event.preventDefault()
+        event.preventDefault();
         citySearch = $(".cityInput").val();
         console.log(citySearch);
 
