@@ -5,7 +5,8 @@ body {
 }
 
 .nav-style {
-    background-image: url("assets/images/D1earthSplash2.png");
+    /* background-image: url("assets/images/D1earthSplash2.png"); */
+    background-image: url("https://github.com/SMcGrail/Weather-Dashboard/blob/master/assets/images/D1earthSplash2.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -65,7 +66,8 @@ body {
     text-align: right;
     width: 250px;
     height: 800px;
-    background-image: url("assets/images/D1traveler.png");
+    /* background-image: url("assets/images/D1traveler.png"); */
+    background-image: url("https://github.com/SMcGrail/Weather-Dashboard/blob/master/assets/images/D1traveler.png")
     background-repeat: no-repeat;
     background-size: cover;
 
