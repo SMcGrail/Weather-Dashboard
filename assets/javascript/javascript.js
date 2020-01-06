@@ -11,14 +11,17 @@ $(document).ready(function () {
     }, 1000);
 
     let citySearch;
-    const queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
     const apiKey = "a2120d1ed5f7642121209ff5a7dc902b";
 
 
     $(".searchBtn").on("click", function () {
         event.preventDefault()
-        citySearch = $(this).prev().val();
+        citySearch = $(".cityInput").val();
+        // citySearch = $(this).prev().val();
         console.log(citySearch);
+
+        const queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
+
 
         $.ajax({
             url: queryURL,
