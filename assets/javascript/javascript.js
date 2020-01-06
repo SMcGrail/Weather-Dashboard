@@ -37,7 +37,7 @@ $(document).ready(function () {
 
             const lat = response.coord.lat;
             const lon = response.coord.lon;
-            const uvURL = "http://api.openweathermap.org/data/2.5/uvi?appid=88ac7af34cb90d87533bbf879a2bb928&lat=" + lat + "&lon=" + lon;
+            const uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=88ac7af34cb90d87533bbf879a2bb928&lat=" + lat + "&lon=" + lon;
            
             $.ajax({
                 url: uvURL,
