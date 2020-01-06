@@ -1,46 +1,118 @@
 body {
-    background-color: #defdfb;
+    background-color: #000815;
+    box-sizing: border-box;
+    
+}
+
+.nav-style {
+    background-image: url("/D1earthSplash2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navText-style {
+    font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 25px;
 }
 
 #currentDay {
-    color: #7cddd5;
+    color: #3c4457;
+    background-color: #ffffff52;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 25px;
     font-size: 18px;
-    padding-top: 8px;
+    font-weight: bold;
+    padding:  10px;
 }
 
 .btn-style {
-    color: #7cddd5;
-    border-color: #7cddd5;
+    color: white;
+    border-color: white;
 
+}
+
+.recentList {
+    /* background-color: #ffffffb4; */
+    background-color: #00081577;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 18px;
+    /* font-weight: bold; */
+    margin: 10px;
 }
 
 .btn-style:hover, .btn-style:active, .btn-style:link {
-    background-color: #7cddd5;
+    background-color: #3c4457;
     color:#212529;
-    border-color: #7cddd5;
+    border-color: #3c4457;
 }
 
 .jumbotron-style {
+    display: inline-block;
+    position: relative;
+    left: 250px;
     width: 1100px;
     height: 600px;
-    float: right;
-    background-image: -webkit-linear-gradient(white, #414141);
+    /* float: right; */
+    background-color: #000815;
+    text-align: left;
 }
 
 .recent-search {
     float: left;
+    position: absolute;
+    text-align: right;
+    width: 250px;
+    height: 800px;
+    background-image: url("/D1traveler.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
 .recent-title {
-    color: #3a3a3a;
-    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 25px;
     padding: 10px;
-    
+  
 }
 
+.cityText {
+    color: white;
+}
 
+.hRule {
+    border-color: white;
+}
+
+.weatherCard {
+    background-color: #c4c9f8;
+    position: relative;
+    display: inline-block;
+    width: 18rem;
+}
+
+.weatherSpecs {
+    display: inline-block;
+}
+
+.todaySpecs {
+    float: left;
+    width: 200px;
+    border-radius: 50px;
+    background-color: #ffffff5e;
+    margin: 10px;
+    padding: 5px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.weatherP {
+    /* display: inline-block; */
+    color: #000815;
+    font-weight: bold;
+}
