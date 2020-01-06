@@ -20,7 +20,7 @@ $(document).ready(function () {
         // citySearch = $(this).prev().val();
         console.log(citySearch);
 
-        const queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
+        const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
 
 
         $.ajax({
