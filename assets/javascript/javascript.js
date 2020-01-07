@@ -11,7 +11,7 @@ $(document).ready(function () {
     }, 1000);
 
     navigator.geolocation.getCurrentPosition(function (position) {
-        
+
         const loadLat = (position.coords.latitude).toFixed(0);
         const loadLon = (position.coords.longitude).toFixed(0);
         console.log(loadLat, loadLon);
@@ -45,23 +45,36 @@ $(document).ready(function () {
 
     });
 
-
     let citySearch;
+    const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+    // const searchHistory = [];
+    console.log(searchHistory);
     // const apiKey = "a2120d1ed5f7642121209ff5a7dc902b";
-
 
     $(".searchBtn").on("click", function () {
         event.preventDefault();
         citySearch = $(".cityInput").val();
         console.log(citySearch);
 
+        searchHistory.unshift(citySearch);
+        searchHistory.splice(5);
+        localStorage.setItem("searchHistory", searchHistory);
+
+
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
+
+
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
             console.log(response);
+
+
+
+
+
             $(".cityName").text((response.name) + " " + ((response.main.temp).toFixed(0)) + "°");
             $(".cityTemp").text(((response.main.temp).toFixed(0)) + "°");
             $(".todayHumid").text((response.main.humidity) + "%");
@@ -80,13 +93,14 @@ $(document).ready(function () {
             }).then(function (uvResponse) {
                 console.log(uvResponse);
                 $(".todayUv").text(uvResponse.value);
-            })
+            });
+
         });
 
 
     });
 
-   
+
 
 });
 
