@@ -10,6 +10,7 @@ $(document).ready(function () {
         todayDate.text(date);
     }, 1000);
 
+    //give weather for current location on load
     navigator.geolocation.getCurrentPosition(function (position) {
 
         const loadLat = (position.coords.latitude).toFixed(0);
@@ -43,12 +44,17 @@ $(document).ready(function () {
             })
         });
 
+        setRecent();
+
     });
 
+
+    //give weather for user selected location on search
     let citySearch;
     const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
     console.log(searchHistory);
     // const apiKey = "a2120d1ed5f7642121209ff5a7dc902b";
+
 
     $(".searchBtn").on("click", function () {
         event.preventDefault();
@@ -58,30 +64,14 @@ $(document).ready(function () {
         searchHistory.unshift(citySearch);
         searchHistory.splice(5);
         localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-
-        for (let i = 0; i < searchHistory.length; i++) {
-            $(".recentListItem").empty(); 
-            const recentListItem = $("<li>");
-            recentListItem.text(searchHistory[i]);
-            recentListItem.addClass("recentCity");
-            $(".recentList").append(recentListItem);
-        }
-
-
+        
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
-
-
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
             console.log(response);
-
-
-
-
-
             $(".cityName").text((response.name) + " " + ((response.main.temp).toFixed(0)) + "°");
             $(".cityTemp").text(((response.main.temp).toFixed(0)) + "°");
             $(".todayHumid").text((response.main.humidity) + "%");
@@ -107,7 +97,17 @@ $(document).ready(function () {
 
     });
 
+    //function to add recent searches
+    function setRecent() {
+        for (let i = 0; i < searchHistory.length; i++) {
+            $(".recentListItem").empty();
+            const recentListItem = $("<li>");
+            recentListItem.text(searchHistory[i]);
+            recentListItem.addClass("recentCity");
+            $(".recentList").append(recentListItem);
 
+        }
+    }
 
 });
 
