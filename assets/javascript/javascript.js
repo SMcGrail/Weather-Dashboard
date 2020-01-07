@@ -47,7 +47,6 @@ $(document).ready(function () {
 
     let citySearch;
     const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
-    // const searchHistory = [];
     console.log(searchHistory);
     // const apiKey = "a2120d1ed5f7642121209ff5a7dc902b";
 
@@ -58,7 +57,15 @@ $(document).ready(function () {
 
         searchHistory.unshift(citySearch);
         searchHistory.splice(5);
-        localStorage.setItem("searchHistory", searchHistory);
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+
+        for (let i = 0; i < searchHistory.length; i++) {
+            $(".recentListItem").empty(); 
+            const recentListItem = $("<li>");
+            recentListItem.text(searchHistory[i]);
+            recentListItem.addClass("recentCity");
+            $(".recentList").append(recentListItem);
+        }
 
 
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + ",us&mode=json&units=imperial&appid=a2120d1ed5f7642121209ff5a7dc902b";
